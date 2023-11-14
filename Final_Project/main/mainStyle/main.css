@@ -1,0 +1,11 @@
+.block{
+    width: 70%;
+    height: auto;
+    margin-left: 220px;
+}
+#prev{
+    margin-left: 200px;
+}
+#next{
+    margin-right: 250px;
+}

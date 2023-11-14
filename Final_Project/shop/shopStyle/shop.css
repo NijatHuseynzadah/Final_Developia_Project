@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ok{
+    font-size: 100px;
+}
+.computer{
+    border-radius: 10px;
+    border: 1px silver solid;
+    width: 210px;
+    margin: 20px;
+    margin-right: none;
+
+}
+.imgComps{
+    width: 200px;
+}
+
+.moreBTN{
+    margin-left: 70px;
+}
+
+.size{
+    width: 300px;
+    margin-left: 350px;
+}

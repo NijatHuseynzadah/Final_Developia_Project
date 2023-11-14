@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.bg:has(.my-modal.active){
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.my-modal{
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 100px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 20px;
+    display: none;
+    background: white;
+}
+
+.my-modal.active{
+    display: block;
+}
+
+#bgModalColor{
+    background-color: rgb(223, 237, 255);
+}
+.comp{
+    width: 100px;
+}
+#photoOfComp{
+    width: 150px;
+    margin-top: 10px;
+}
