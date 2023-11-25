@@ -1,58 +1,57 @@
 let users = [
-{
+    {
         name: 'u1',
-        password : 'p1',
+        password: 'p1',
         phone: '000-000-0000',
-        comps : [
+        comps: [
             {
-                id : 1,
-                type: 'Acer',
+                id: 1,
+                mark: 'Acer',
                 name: 'acer1',
                 price: 123,
-                opinion: 'have',
+                overview: 'nitro 5',
                 new: 'Yes!',
-                photo : 'https://www.notebookcheck-ru.com/fileadmin/Notebooks/Acer/Aspire_E5-553G-109A/4zu3_Acer_Aspire_E5_553G_Teaser.jpg',
-                fullMemory: '12',
-                prosessor: 'core i7',
-                notFullMemory: '12',
+                photo: 'https://www.notebookcheck-ru.com/fileadmin/Notebooks/Acer/Aspire_E5-553G-109A/4zu3_Acer_Aspire_E5_553G_Teaser.jpg',
+                RAM: '12',
+                processor: 'core i7',
+                ROM: '12',
                 typeOfMemory: 'HDD',
-                sistem: 'vin 11',
+                system: 'win 11',
                 videoCart: '12'
             },
         ],
     },
 ];
-if(!localStorage.getItem('users')){
+
+if (!localStorage.getItem('users')) {
     localStorage.setItem('users', JSON.stringify(users))
 }
 
-users = JSON.parse(localStorage.getItem('users'))
+users = JSON.parse(localStorage.getItem('users'));
 
 $(".place").on("input", function () {
     if (
-    $("#name").val().length >= 2 &&
-    $("#password").val().length >= 2 
+        $("#name").val().length >= 2 &&
+        $("#password").val().length >= 2
     ) {
-    $("#submit").attr("disabled", false);
+        $("#submit").attr("disabled", false);
     } else {
-    $("#submit").attr("disabled", true);
+        $("#submit").attr("disabled", true);
     }
 });
 
-$('form').on('submit', function(event){
-    event.preventDefault()
+$('form').on('submit', function (event) {
+    event.preventDefault();
 
     let userExist = users.some(
-        
-    (user) => user.name === $('#name').val() && user.password === $('#password').val()
-
+        (user) => user.name === $('#name').val() && user.password === $('#password').val()
     );
-    if(userExist){
+    if (userExist) {
         localStorage.setItem('currentUser', $('#name').val())
         $('.place').val('')
         location.href = '../../main.html'
-    }else{
+    } else {
         alert('yout password or name is incorrect')
     }
 
-})
+});

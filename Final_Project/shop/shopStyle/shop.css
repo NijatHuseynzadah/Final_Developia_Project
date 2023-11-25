@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: lightblue;
+}
+
 .ok{
     font-size: 100px;
 }
 .computer{
+    background-color: white;
     border-radius: 10px;
     border: 1px silver solid;
     width: 210px;
@@ -27,3 +32,4 @@
     width: 300px;
     margin-left: 350px;
 }
+

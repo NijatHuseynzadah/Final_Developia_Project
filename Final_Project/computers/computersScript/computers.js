@@ -26,7 +26,7 @@ function updateSite(){
     
 }
 function makeModalNull(){
-    $('#type').val('Acer')
+    $('#mark').val('Acer')
     $('#name').val('')
     $('#price').val('')
     $('#opinion').val('')
@@ -56,7 +56,7 @@ $('#clearModal').click(function(){
 $('#save-comp').click(function(){
     if(!edit){
         let newComp = {
-            id: comps.length === 0 ? 1 : comps.at(-1).id + 1,
+            id: comps.length === 0 ? Date.now() : comps.at(-1).id + 1,
             mark: $('#mark').val(),
             name:  $('#name').val(),
             price: $('#price').val(),
@@ -86,7 +86,7 @@ $('#save-comp').click(function(){
         const index = comps.findIndex(comp => comp.id + 'E' === id) 
         comps[index] = {
             id: comps[index].id,
-            type: $('#type').val(),
+            mark: $('#mark').val(),
             name:  $('#name').val(),
             price: $('#price').val(),
             opinion: $('#opinion').val(),
@@ -129,7 +129,7 @@ $('table').click(function(e){
         id =  e.target.id
         const currentComp = comps.find(comp => comp.id + 'E' === id)
 
-        $('#type').val(currentComp.type)
+        $('#mark').val(currentComp.mark)
         $('#name').val(currentComp.name)
         $('#price').val(currentComp.price)
         $('#opinion').val(currentComp.opinion)
